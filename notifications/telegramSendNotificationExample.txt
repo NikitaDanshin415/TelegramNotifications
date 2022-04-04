@@ -1,7 +1,25 @@
-java
+java \
 "-DprojectName=${PROJECT_NAME}" \
 "-Denv=${ENVIRONMENT}" \
 "-DreportLink=${BUILD_URL}" \
+"-Dcomm=Any comment here" \
+"-Dconfig.file=notifications/allure-notifications-3.1.2.jar" \
+-jar notifications/allure-notifications-3.1.2.jar
+
+
+java \
+"-DprojectName=test" \
+"-Denv=${ENVIRONMENT}" \
+"-DreportLink=test" \
+"-Dcomm=Any comment here" \
+"-Dconfig.file=notifications/telegramConfig.json" \
+-jar notifications/allure-notifications-3.1.2.jar
+
+
+java \
+"-DprojectName=test" \
+"-Denv=${ENVIRONMENT}" \
+"-DreportLink=Test" \
 "-Dcomm=Any comment here" \
 "-Dconfig.file=notifications/allure-notifications-3.1.2.jar" \
 -jar notifications/allure-notifications-3.1.2.jar
